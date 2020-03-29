@@ -48,15 +48,23 @@ print(all_predictions)`
 
 ['ham' 'ham' 'spam' ..., 'ham' 'ham' 'ham'] 
 
-## Results
+### Machine Learning Pipeline
 
+`pipeline = Pipeline([
+    ('bow', CountVectorizer(analyzer=text_process)),  # strings to token integer counts
+    ('tfidf', TfidfTransformer()),  # integer counts to weighted TF-IDF scores
+    ('classifier', MultinomialNB()),  # train on TF-IDF vectors w/ Naive Bayes classifier
+])`
+
+
+## Results
              precision    recall  f1-score   support
 
-        ham       0.98      1.00      0.99      4825
-       spam       1.00      0.85      0.92       747
+        ham       1.00      0.96      0.98      1001
+       spam       0.75      1.00      0.85       114
 
-avg / total       0.98      0.98      0.98      5572
+avg / total       0.97      0.97      0.97      1115
 
-![](700px-Precisionrecall.svg)
+
 
 
