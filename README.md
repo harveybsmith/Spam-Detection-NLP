@@ -48,6 +48,15 @@ print(all_predictions)`
 
 ['ham' 'ham' 'spam' ..., 'ham' 'ham' 'ham'] 
 
+## Results
 
+             precision    recall  f1-score   support
+
+        ham       0.98      1.00      0.99      4825
+       spam       1.00      0.85      0.92       747
+
+avg / total       0.98      0.98      0.98      5572
+
+![](700px-Precisionrecall.svg)
 
 
